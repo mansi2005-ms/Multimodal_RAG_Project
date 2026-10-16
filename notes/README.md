@@ -125,7 +125,39 @@ User Query -> Embed -> Similarity Search (k=2) -> LLM -> Answer
 
 ```text
 .
-├── assets/     # Posters, logos, and banners
-├── Material/   # Presentation PPT, documentation PDF, folder guides
-└── notes/      # Architecture notes and technical documentation
+├── Material/        # Presentation PPT, documentation PDF, folder guides
+├── assests/         # Project poster, logos (incl. GudSky Foundation logo), banners
+├── data/            # Input data (PDFs and images)
+├── db/              # ChromaDB vector database storage
+├── notes/           # Architecture notes and technical documentation
+├── README.md        # Project overview
+├── app.py           # Flask application (web backend and chat API)
+├── chat.py          # Chat logic
+├── main.py          # Main entry point
+├── make_image.py    # Script to generate images
+├── make_pdf.py      # Script to generate PDFs
+├── multimodal.py    # Multimodal (text + image) processing
+└── query.py         # Querying and retrieval from the vector database
 ```
+
+### Folders
+
+| Folder | Contents |
+|---|---|
+| `Material/` | Project presentation, detailed documentation PDF, and folder guides |
+| `assests/` | Project poster, logos, and banners |
+| `data/` | Source documents used by the chatbot |
+| `db/` | Persisted vector database (ChromaDB) |
+| `notes/` | Architecture and technical notes (this file) |
+
+### Files
+
+| File | Purpose |
+|---|---|
+| `app.py` | Runs the Flask web app and exposes chat endpoints |
+| `chat.py` | Handles the chat flow between user and model |
+| `main.py` | Main entry point of the project |
+| `make_image.py` | Generates image files for the data folder |
+| `make_pdf.py` | Generates PDF files for the data folder |
+| `multimodal.py` | Processes text and images together |
+| `query.py` | Retrieves relevant chunks from ChromaDB for a query |
